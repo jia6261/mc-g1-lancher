@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Builder Mod 启动器</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部导航栏 -->
+        <header class="navbar">
+            <div class="navbar-brand">
+                <h1>🎮 AI Builder Mod 启动器</h1>
+                <p class="subtitle">Minecraft Fabric 环境管理工具</p>
+            </div>
+        </header>
+
+        <!-- 主内容区域 -->
+        <main class="main-content">
+            <!-- 版本选择卡片 -->
+            <section class="card">
+                <h2>📦 步骤 1: 选择 Minecraft 版本</h2>
+                <div class="version-selector">
+                    <select id="versionSelect" class="form-control">
+                        <option value="">正在加载版本列表...</option>
+                    </select>
+                    <button class="btn btn-primary" onclick="loadVersions()">刷新版本列表</button>
+                </div>
+                <div id="versionInfo" class="info-box"></div>
+            </section>
+
+            <!-- 环境设置卡片 -->
+            <section class="card">
+                <h2>⚙️ 步骤 2: 设置 Fabric 环境</h2>
+                <p>此步骤将下载 Fabric Loader 和 Fabric API，为您的 Minecraft 安装做好准备。</p>
+                <button class="btn btn-success" onclick="setupEnvironment()">设置环境</button>
+                <div id="setupProgress" class="progress-container" style="display: none;">
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <p id="setupMessage" class="progress-message"></p>
+                </div>
+            </section>
+
+            <!-- 模组选择卡片 -->
+            <section class="card">
+                <h2>🧩 步骤 3: 选择模组</h2>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="installAIMod" checked>
+                        <span>安装 AI Builder Mod (用于在游戏中建造结构)</span>
+                    </label>
+                </div>
+                <button class="btn btn-info" onclick="installMods()">安装模组</button>
+                <div id="modInstallStatus" class="status-message"></div>
+            </section>
+
+            <!-- 启动游戏卡片 -->
+            <section class="card">
+                <h2>🚀 步骤 4: 启动游戏</h2>
+                <p>点击下方按钮获取详细的启动说明。</p>
+                <button class="btn btn-warning" onclick="launchGame()">获取启动说明</button>
+                <div id="launchInstructions" class="instructions-box"></div>
+            </section>
+
+            <!-- 状态检查卡片 -->
+            <section class="card">
+                <h2>📊 安装状态</h2>
+                <button class="btn btn-secondary" onclick="checkStatus()">检查状态</button>
+                <div id="statusInfo" class="status-info"></div>
+            </section>
+
+            <!-- 日志输出卡片 -->
+            <section class="card">
+                <h2>📝 操作日志</h2>
+                <div id="logOutput" class="log-output"></div>
+                <button class="btn btn-secondary" onclick="clearLog()">清除日志</button>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <p>© 2024 AI Builder Mod 启动器 | 基于 Fabric Loader</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
+
