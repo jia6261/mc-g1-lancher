@@ -22,8 +22,8 @@ param(
 )
 
 # --- 配置 ---
-$RepositoryUrl = "https://github.com/YourGitHubUser/AIBuilderLauncher.git" # 假设的 GitHub 仓库地址
-$ZipDownloadUrl = "https://github.com/YourGitHubUser/AIBuilderLauncher/archive/refs/heads/main.zip" # 假设的 ZIP 下载地址
+$RepositoryUrl = "https://github.com/jia6261/mc-g1-lancher.git"
+$ZipDownloadUrl = "https://github.com/jia6261/mc-g1-lancher/archive/refs/heads/main.zip"
 $ModFileName = "minecraft-ai-builder-1.0.0.jar"
 $ModSourcePath = "$PSScriptRoot\$ModFileName" # 假设模组文件与脚本在同一目录
 

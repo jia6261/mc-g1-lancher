@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # --- 配置 ---
-REPO_URL="https://github.com/YourGitHubUser/AIBuilderLauncher.git" # 假设的 GitHub 仓库地址
-ZIP_DOWNLOAD_URL="https://github.com/YourGitHubUser/AIBuilderLauncher/archive/refs/heads/main.zip" # 假设的 ZIP 下载地址
+REPO_URL="https://github.com/jia6261/mc-g1-lancher.git"
+ZIP_DOWNLOAD_URL="https://github.com/jia6261/mc-g1-lancher/archive/refs/heads/main.zip"
 MOD_FILE_NAME="minecraft-ai-builder-1.0.0.jar"
 MOD_SOURCE_PATH="./$MOD_FILE_NAME" # 假设模组文件与脚本在同一目录
 TARGET_DIR="$HOME/AIBuilderLauncher"
